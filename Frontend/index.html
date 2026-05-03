@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proyecto Personal</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Primer CRUD</h1>
+    </header>
+ <section id="formulario">
+    <h2>Formulario</h2>
+        <form id="form-vuln">
+
+            <input type="text " id="nombre" placeholder="nombre de la vulnerabilidad">
+            <input type="text " id="url" placeholder="URL afectada">
+
+            <select  id="tipo-vulnr">
+
+                <option value="" disabled selected hidden>Tipo de Vulnerabilidad</option>
+                <option value="XSS">XSS</option>
+                <option value="SQL Injection">SQL Injection</option>
+                <option value="Broken Access Control">Broken Access Control</option>
+                <option value="SSRF">SSRF</option>
+                <option value="IDOR">IDOR</option>
+
+            </select>
+
+            <select id="severidad">
+                <option value="" disabled selected hidden>SEVERIDAD</option>
+                <option value="critica">Critica</option>
+                <option value="alta" >Alta</option>
+                <option value="media" >Media</option>
+                <option value="baja">Baja</option>
+                <option value="" disabled selected hidden>SEVERIDAD</option>
+            </select>
+
+            <select id="estado">
+                <option disabled selected hidden> ESTADO</option>
+                <option value="pendiente">Pendiente</option>
+                <option value="reportada">Reportada</option>
+                <option value="resuelta"> Resuelta</option>
+            </select>
+
+            <textarea id="descripcion" placeholder="Descripcion"></textarea>
+
+            <button id="boton"  type="submit">Guardar</button>
+        </form>
+
+ </section>
+
+    <section id="tabla">
+        <h3>tabla</h3>
+
+        <table id="tabla-vulns">
+
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Tipo</th>
+                    <th>Severidad</th>
+                    <th>URL</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+
+            </thead>
+            <tbody id="cuerpo-tabla">
+
+            </tbody>
+        </table>
+
+    </section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
